@@ -1826,7 +1826,7 @@
             "type": "object"
           }
         },
-        "description": "Tool for scraping webpages using Firecrawl. To run this tool, you need to have a Firecrawl API key.\n\nArgs:\n    api_key (str): Your Firecrawl API key.\n    config (dict): Optional. It contains Firecrawl API parameters.\n\nDefault configuration options:\n    formats (list[str]): Content formats to return. Default: [\"markdown\"]\n    only_main_content (bool): Only return main content. Default: True\n    include_tags (list[str]): Tags to include. Default: []\n    exclude_tags (list[str]): Tags to exclude. Default: []\n    headers (dict): Headers to include. Default: {}\n    wait_for (int): Time to wait for page to load in ms. Default: 0\n    json_options (dict): Options for JSON extraction. Default: None",
+        "description": "Tool for scraping webpages using Firecrawl. To run this tool, you need to have a Firecrawl API key.\n\nArgs:\n    api_key (str): Your Firecrawl API key.\n    config (dict): Optional. It contains Firecrawl API parameters.\n\nDefault configuration options:\n    formats (list[str]): Content formats to return. Default: [\"markdown\"]\n    onlyMainContent (bool): Only return main content. Default: True\n    includeTags (list[str]): Tags to include. Default: []\n    excludeTags (list[str]): Tags to exclude. Default: []\n    headers (dict): Headers to include. Default: {}\n    waitFor (int): Time to wait for page to load in ms. Default: 0\n    json_options (dict): Options for JSON extraction. Default: None",
         "properties": {
           "api_key": {
             "anyOf": [

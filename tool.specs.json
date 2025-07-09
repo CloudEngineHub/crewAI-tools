@@ -734,6 +734,164 @@
       "run_params_schema": {}
     },
     {
+      "description": "A tool to search the Couchbase database for relevant information on internal documents.",
+      "env_vars": [],
+      "humanized_name": "CouchbaseFTSVectorSearchTool",
+      "init_params_schema": {
+        "$defs": {
+          "EnvVar": {
+            "properties": {
+              "default": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Default"
+              },
+              "description": {
+                "title": "Description",
+                "type": "string"
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "required": {
+                "default": true,
+                "title": "Required",
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "name",
+              "description"
+            ],
+            "title": "EnvVar",
+            "type": "object"
+          }
+        },
+        "description": "Tool to search the Couchbase database",
+        "properties": {
+          "bucket_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": [
+              null
+            ],
+            "title": "Bucket Name"
+          },
+          "collection_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": [
+              null
+            ],
+            "title": "Collection Name"
+          },
+          "embedding_key": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": "embedding",
+            "description": "Name of the field in the search index that stores the vector",
+            "title": "Embedding Key"
+          },
+          "index_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": [
+              null
+            ],
+            "title": "Index Name"
+          },
+          "limit": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": 3,
+            "title": "Limit"
+          },
+          "scope_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": [
+              null
+            ],
+            "title": "Scope Name"
+          },
+          "scoped_index": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scoped Index"
+          }
+        },
+        "title": "CouchbaseFTSVectorSearchTool",
+        "type": "object"
+      },
+      "name": "CouchbaseFTSVectorSearchTool",
+      "package_dependencies": [],
+      "run_params_schema": {
+        "description": "Input for CouchbaseTool.",
+        "properties": {
+          "query": {
+            "description": "The query to search retrieve relevant information from the Couchbase database. Pass only the query, not the question.",
+            "title": "Query",
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "CouchbaseToolSchema",
+        "type": "object"
+      }
+    },
+    {
       "description": "A tool that can be used to semantic search a query from a DOCX's content.",
       "env_vars": [],
       "humanized_name": "Search a DOCX's content",
